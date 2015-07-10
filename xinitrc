@@ -1,8 +1,8 @@
 #!/bin/bash
+setxkbmap -option caps:backspace
+setxkbmap -option compose:rctrl
+setxkbmap -option bksp:bksp_escape
 if [ "$WM" == "" ]; then
-  setxkbmap -option caps:escape
-  setxkbmap -option compose:rctrl
-  setxkbmap -option bksp:bksp_escape
   if [ -f ~/.awesome_config ]; then
     export awesomeconfig=$(cat ~/.awesome_config)
   else

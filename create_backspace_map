@@ -1,2 +1,6 @@
 #!/bin/bash
-sed -i '/bksp:bksp_escape\t=\t+bksp(bksp_escape)/d;/! option\t=\tsymbols/a \ bksp:bksp_escape\t=\t+bksp(bksp_escape)' /usr/share/X11/xkb/rules/evdev
+sed -i '/! option[[:blank:]]*=[[:blank:]]*symbols/a \  bksp:bksp_escape\t=\t+bksp(bksp_escape) ' /usr/share/X11/xkb/rules/evdev
+
+sed -i '/! option/a \  bksp                 Backspace key behavior\n  bksp:bksp_escape     Backspace as Escape' /usr/share/X11/xkb/rules/evdev.lst
+
+printf 'partial alphanumeric_keys\nxkb_symbols "bksp_escape" {\n    key <BKSP> { [ Escape ] };\n};\n' > /usr/share/X11/xkb/symbols/bksp
