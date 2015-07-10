@@ -1,0 +1,2 @@
+#!/bin/bash
+sed -i '/bksp:bksp_escape\t=\t+bksp(bksp_escape)/d;/! option\t=\tsymbols/a \ bksp:bksp_escape\t=\t+bksp(bksp_escape)' /usr/share/X11/xkb/rules/evdev
