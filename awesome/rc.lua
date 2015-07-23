@@ -40,15 +40,15 @@ end
 beautiful.init("/home/user/dotfiles/awesome/theme.lua")
 beautiful.useless_gap = 6
 
-if beautiful.wallpaper then
-  for s = 1, screen.count() do
-    if s == 1 then
-      gears.wallpaper.maximized("/home/user/bg1.png", s, true)
-    end
-    if s == 2 then
-      gears.wallpaper.maximized("/home/user/bg2.png", s, true)
-    end
-    if s > 2 then
+for s = 1, screen.count() do
+  if s == 1 then
+    gears.wallpaper.maximized("/home/user/bg1.png", s, true)
+  end
+  if s == 2 then
+    gears.wallpaper.maximized("/home/user/bg2.png", s, true)
+  end
+  if s > 2 then
+    if beautiful.wallpaper then
       gears.wallpaper.maximized(beautiful.wallpaper, s, true)
     end
   end
@@ -157,7 +157,7 @@ for s = 1, screen.count() do
   awful.button({ }, 1, function () awful.layout.inc(layouts, 1) end),
   awful.button({ }, 3, function () awful.layout.inc(layouts, -1) end)
   ))
-  tags[s] = awful.tag({ 1, 2, 3, 4, 5, 6, 7, 8, 9 }, s, layouts[1])
+  tags[s] = awful.tag({ "一", "二", "三", "四", "五", "六", "七", "八", "九" }, s, layouts[1])
   taglist[s] = awful.widget.taglist(s,
   awful.widget.taglist.filter.all,
   taglist.buttons
@@ -227,6 +227,12 @@ awful.key({modkey}, "r", function ()
 end),
 awful.key({modkey}, "q", function ()
   awful.util.spawn("firefox -new-window")
+end),
+awful.key({modkey}, "q", function ()
+  awful.util.spawn("firefox -new-window")
+end),
+awful.key({modkey}, "p", function ()
+  awful.util.spawn("cmus-remote --pause")
 end),
 --	awful.key({modkey}, "k", function ()
 --		awful.util.spawn("terminator --working-directory=/opt/romaji_to_kana -e './run'")

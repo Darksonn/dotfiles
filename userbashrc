@@ -75,7 +75,7 @@ function prompt_command {
   export BEFOREDIR="$LASTDIR"
   export LASTDIR="$newdir"
 }
-export PROMPT_COMMAND=prompt_command
+PROMPT_COMMAND=prompt_command
 alias cdback='cd "$BEFOREDIR"'
 
 function R {

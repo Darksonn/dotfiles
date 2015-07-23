@@ -54,7 +54,7 @@ nnoremap <F4> :b
 nnoremap <F5> :e 
 
 " Neovims terminal
-tnoremap <Esc> <C-\><C-n>
+tnoremap jk <C-\><C-n>
 
 " sometimes I start leaving with ZZ, but then redecide and leave with :q
 nnoremap ; :
