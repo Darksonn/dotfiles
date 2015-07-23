@@ -228,9 +228,6 @@ end),
 awful.key({modkey}, "q", function ()
   awful.util.spawn("firefox -new-window")
 end),
-awful.key({modkey}, "q", function ()
-  awful.util.spawn("firefox -new-window")
-end),
 awful.key({modkey}, "p", function ()
   awful.util.spawn("cmus-remote --pause")
 end),
