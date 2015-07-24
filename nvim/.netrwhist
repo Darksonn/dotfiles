@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/home/user/coursera/datascitoolbox/t'
-let g:netrw_dirhist_2='/home/user/coursera/datascitoolbox'
-let g:netrw_dirhist_3='/home/user/vimperator-labs/common/content'
-let g:netrw_dirhist_4='/home/user/.config/awesome_devel/theme'
-let g:netrw_dirhist_5='/home/user/src/nvim-wm/src'
-let g:netrw_dirhist_6='/home/user/src/vinjated/src'
