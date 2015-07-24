@@ -16,14 +16,6 @@ NeoBundle 'taglist.vim'
 NeoBundle 'netrw.vim'
 NeoBundle 'tpope/vim-fugitive'
 
-" colors
-NeoBundle 'sjl/badwolf'
-NeoBundle 'vim-scripts/BusyBee'
-NeoBundle 'djjcast/mirodark'
-
-" candycode + visual
-" desertEx +
-
 call neobundle#end()
 NeoBundleCheck " warn me if any packages aren't installed
 filetype plugin indent on
@@ -46,12 +38,6 @@ set laststatus=2
 " Leader init
 noremap <Space> <Nop>
 let mapleader = "\<Space>"
-
-" Tabs
-nnoremap <silent> <F2> :bp<CR>
-nnoremap <silent> <F3> :bn<CR>
-nnoremap <F4> :b 
-nnoremap <F5> :e 
 
 " Neovims terminal
 tnoremap jk <C-\><C-n>
@@ -101,6 +87,8 @@ augroup line_numbering
 	autocmd!
 	au InsertEnter * set nornu
 	au InsertLeave * set rnu
+  au TermOpen * set rnu
+  au TermOpen * set number
 augroup END
 set rnu
 set number
@@ -169,7 +157,7 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 
 " colors
-colorscheme badwolf
+colorscheme pcs
 
 " change case
 nnoremap <leader>~u viwU
@@ -216,3 +204,6 @@ nnoremap <silent> <leader>p :call ClipboardPaste()<cr>
 " beginning of line
 noremap 0 ^
 noremap ^ 0
+
+nnoremap <leader>l :b 
+nnoremap <leader>k :e 
