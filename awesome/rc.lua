@@ -10,7 +10,7 @@ local beautiful = require("beautiful")
 -- Notification library
 local naughty = require("naughty")
 local menubar = require("menubar")
--- local vicious = require("vicious")
+
 
 
 -- Error handling
@@ -38,7 +38,6 @@ end
 
 --TODO theming
 beautiful.init("/home/user/dotfiles/awesome/theme.lua")
-beautiful.useless_gap = 6
 
 for s = 1, screen.count() do
   if s == 1 then
@@ -207,7 +206,7 @@ end),
 awful.key({modkey, "Shift"}, "s", function ()
   awful.client.swap.byidx(-1)
 end),
-awful.key({modkey}, "Return", function () awful.util.spawn("terminator") end),
+awful.key({modkey}, "Return", function () awful.util.spawn("urxvt") end),
 awful.key({modkey, "Shift", "Control"}, "r", awesome.restart),
 awful.key({modkey, "Shift", "Control"}, "q", awesome.quit),
 awful.key({modkey}, "a", function ()
@@ -231,9 +230,6 @@ end),
 awful.key({modkey}, "p", function ()
   awful.util.spawn("cmus-remote --pause")
 end),
---	awful.key({modkey}, "k", function ()
---		awful.util.spawn("terminator --working-directory=/opt/romaji_to_kana -e './run'")
---	end),
 awful.key({modkey}, "x", function ()
   awful.prompt.run({prompt = "Run Lua code: "},
   promptbox[mouse.screen].widget,
