@@ -15,7 +15,7 @@ if [ "$WM" == "" ]; then
 else
   log=~/.log
   echo "Using log file $log"
-  exec "$WM" > "$log" 2>&1
+  exec $WM > "$log" 2>&1
   unset log
 fi
 
