@@ -3,7 +3,7 @@ set runtimepath+=~/.nvim/bundle/neobundle.vim/,/opt/neovim/runtime
 call neobundle#begin(expand('~/.nvim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
-NeoBundle 'bling/vim-airline'
+"NeoBundle 'bling/vim-airline'
 NeoBundle 'wting/rust.vim'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'vim-scripts/Vim-R-plugin'
@@ -15,6 +15,8 @@ NeoBundle 'scratch.vim'
 NeoBundle 'taglist.vim'
 NeoBundle 'netrw.vim'
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'gerw/vim-HiLinkTrace'
+NeoBundle 'minibufexpl.vim'
 
 call neobundle#end()
 NeoBundleCheck " warn me if any packages aren't installed
@@ -31,8 +33,8 @@ endfunction
 nnoremap <silent> <F9> :call Run_Build()<CR>
 
 " Statusbar
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
+" let g:airline#extensions#tabline#enabled = 1
+" let g:airline_powerline_fonts = 1
 set laststatus=2
 
 " Leader init
@@ -207,3 +209,26 @@ noremap ^ 0
 
 nnoremap <leader>l :b 
 nnoremap <leader>k :e 
+
+" no holding several keys
+" inoremap <Shift>` ~
+" inoremap <Shift>1 !
+" inoremap <Shift>2 @
+" inoremap <Shift>3 #
+" inoremap <Shift>4 $
+" inoremap <Shift>5 %
+" inoremap <Shift>6 ^
+" inoremap <Shift>7 &
+" inoremap <Shift>8 *
+" inoremap <Shift>9 (
+" inoremap <Shift>0 )
+" inoremap <Shift>- _
+" inoremap <Shift>= +
+" inoremap <Shift>[ {
+" inoremap <Shift>] }
+" inoremap <Shift>; :
+" inoremap <Shift>' "
+" inoremap <Shift>, <
+" inoremap <Shift>. >
+" inoremap <Shift>/ ?
+" inoremap <Shift>\ |
