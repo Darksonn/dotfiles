@@ -1,0 +1,7 @@
+#!/bin/bash
+ln -s ~/.xinitrc dotfiles/xinitrc
+ln -s ~/.bashrc dotfiles/userbashrc
+ln -s ~/.Xdefaults dotfiles/Xdefaults
+ln -s ~/.nvim dotfiles/nvim
+ln -s ~/.nvimrc .nvim/nvimrc
+
