@@ -3,6 +3,7 @@ local gears = require("gears")
 local awful = require("awful")
 awful.rules = require("awful.rules")
 awful.autofocus = require("awful.autofocus")
+awful.common = require("awful.widget.common")
 -- Widget and layout library
 local wibox = require("wibox")
 -- Theme handling library
@@ -11,6 +12,10 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 local menubar = require("menubar")
 
+package.path = "/home/user/dotfiles/awesome/?.lua;/home/user/dotfiles/awesome/?/init.lua;" .. package.path
+local lain = require("lain")
+local markup = lain.util.markup
+local separators = lain.util.separators
 
 
 -- Error handling
@@ -88,24 +93,33 @@ awful.util.table.join(awful.button({ }, 1, function () kbdcfg.switch() end))
 -- clock
 clock = awful.widget.textclock()
 
----- cpu monitor
---cpuwidget = awful.widget.graph()
---cpuwidget:set_width(50)
---cpuwidget:set_background_color("#494B4F")
---cpuwidget:set_color("#FF5656")
---cpuwidget:set_gradient_colors({ "#FF5656", "#88A175", "#AECF96" })
---vicious.register(cpuwidget, vicious.widgets.cpu, "$1")
---
----- memory monitor
---memwidget = awful.widget.progressbar()
---memwidget:set_width(8)
---memwidget:set_height(10)
---memwidget:set_vertical(true)
---memwidget:set_background_color("#494B4F")
---memwidget:set_border_color(nil)
---memwidget:set_color({ type = "linear", from = { 0, 0 }, to = { 0,10 }, stops = { {0, "#AECF96"}, {0.5, "#88A175"}, 
---{1, "#3300CC"}}})
---vicious.register(memwidget, vicious.widgets.mem, "$1", 13)
+-- mem
+memwidget = lain.widgets.mem({
+  settings = function()
+    widget:set_text(" " .. mem_now.used .. " MB ")
+  end
+})
+
+-- cpu
+cpuwidget = lain.widgets.cpu({
+    settings = function()
+        widget:set_text(" " .. cpu_now.usage .. "% ")
+    end
+})
+
+-- temp
+tempwidget = lain.widgets.temp({
+    settings = function()
+        widget:set_text(" " .. coretemp_now .. "°C ")
+    end
+})
+
+-- separators
+arrl_dl = separators.arrow_left(beautiful.bg_focus, "alpha")
+arrl_ld = separators.arrow_left("alpha", beautiful.bg_focus)
+spr = wibox.widget.textbox(' ')
+arrl = wibox.widget.imagebox()
+arrl:set_image(beautiful.arrl)
 
 tags = {}
 
@@ -149,6 +163,7 @@ awful.button({ modkey }, 3, awful.client.toggletag)
 )
 
 swibox = {}
+local update_screens_colors_funcs = {}
 for s = 1, screen.count() do
   promptbox[s] = awful.widget.prompt()
   layoutbox[s] = awful.widget.layoutbox(s)
@@ -161,10 +176,6 @@ for s = 1, screen.count() do
   awful.widget.taglist.filter.all,
   taglist.buttons
   )
-  tasklist[s] = awful.widget.tasklist(s,
-  awful.widget.tasklist.filter.currenttags,
-  tasklist.buttons
-  )
   swibox[s] = awful.wibox({ position = "top", screen = s })
 
   -- Widgets that are aligned to the left
@@ -174,12 +185,61 @@ for s = 1, screen.count() do
 
   -- Widgets that are aligned to the right
   local right_layout = wibox.layout.fixed.horizontal()
-  if s == 1 then
-    right_layout:add(wibox.widget.systray())
+  local function create_rl(right_layout_toggle)
+    right_layout:reset()
+    local function right_layout_add (...)
+      local arg = {...}
+      local bgs = {}
+      if right_layout_toggle then
+        right_layout:add(arrl_ld)
+        for i, n in pairs(arg) do
+          right_layout:add(wibox.widget.background(n, beautiful.bg_focus))
+        end
+      else
+        right_layout:add(arrl_dl)
+        for i, n in pairs(arg) do
+          right_layout:add(n)
+        end
+      end
+      right_layout_toggle = not right_layout_toggle
+    end
+    if s == 1 then
+      if right_layout_toggle then
+        beautiful.bg_systray = beautiful.bg_focus
+      else
+        beautiful.bg_systray = beautiful.bg_normal
+      end
+      local systray = wibox.widget.systray()
+      right_layout_add(spr, systray, spr)
+      systray:emit_signal("widget::updated")
+    end
+    right_layout_add(memwidget)
+    right_layout_add(cpuwidget)
+    right_layout_add(tempwidget)
+    right_layout_add(clock)
+    right_layout_add(kbdcfg.widget)
+    right_layout_add(layoutbox[s])
   end
-  right_layout:add(clock)
-  right_layout:add(kbdcfg.widget)
-  right_layout:add(layoutbox[s])
+  create_rl(true)
+  update_screens_colors_funcs[s] = create_rl
+  local focus = {}
+  tasklist[s] = awful.widget.tasklist(s,
+    function (c, screen)
+      focus[c] = awful.widget.tasklist.filter.focused(c, screen)
+      return awful.widget.tasklist.filter.currenttags(c, screen)
+    end,
+    tasklist.buttons,
+    nil,
+    function (w, buttons, label, data, objects)
+      awful.common.list_update(w, buttons, label, data, objects)
+      if focus[objects[#objects]] then
+        create_rl(false)
+      else
+        create_rl(true)
+      end
+      focus = {}
+    end
+  )
 
   -- Now bring it all together (with the tasklist in the middle)
   local layout = wibox.layout.align.horizontal()
@@ -227,8 +287,14 @@ end),
 awful.key({modkey}, "q", function ()
   awful.util.spawn("firefox -new-window")
 end),
-awful.key({modkey}, "p", function ()
+awful.key({}, "#172", function ()
   awful.util.spawn("cmus-remote --pause")
+end),
+awful.key({}, "#122", function ()
+  awful.util.spawn("amixer set Master playback 1-")
+end),
+awful.key({}, "#123", function ()
+  awful.util.spawn("amixer set Master playback 1+")
 end),
 awful.key({modkey}, "x", function ()
   awful.prompt.run({prompt = "Run Lua code: "},
