@@ -1,9 +1,9 @@
 Xresources
 
-*background:#222222
-*foreground:#e8e9ca
+*background:#000000
+*foreground:#ffffff
 
-*color0:    #222222
+*color0:    #000000
 *color1:    #8b3e2f
 *color2:    #526f33
 *color3:    #665847
@@ -15,11 +15,11 @@ Xresources
 *color8:    #4c4c4c
 *color9:    #d75f00
 *color10:   #cee318
-*color11:   #eee685
+*color11:   #eed685
 *color12:   #9ac0cd
 *color13:   #9f79ee
 *color14:   #79cdcd
-*color15:   #e8e9ca
+*color15:   #ffffff
 
-*font: xft:bitstream vera sans mono:size=10:antialias=true
+*font: xft:Anonymous Pro:size=12:antialias=true
 
