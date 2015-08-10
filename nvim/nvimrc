@@ -108,6 +108,7 @@ function! DotLineEnd()
 	%s/^\([^#].*[^. )?!_]\)\([ ]*$\)/\1.\2/
 	noh
 endfunction
+cmap w!! w !sudo tee > /dev/null %
 set ruler
 set wrap
 if has("syntax")
