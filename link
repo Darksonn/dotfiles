@@ -1,7 +1,8 @@
 #!/bin/bash
-ln -s ~/.xinitrc dotfiles/xinitrc
-ln -s ~/.bashrc dotfiles/userbashrc
-ln -s ~/.Xdefaults dotfiles/Xdefaults
-ln -s ~/.nvim dotfiles/nvim
-ln -s ~/.nvimrc .nvim/nvimrc
+ln -s dotfiles/xinitrc ~/.xinitrc
+ln -s dotfiles/userbashrc ~/.bashrc
+ln -s dotfiles/Xdefaults ~/.Xdefaults
+ln -s dotfiles/nvim ~/.nvim
+ln -s .nvim/nvimrc ~/.nvimrc
+ln -s dotfiles/screenshot ~/.screenshot
 

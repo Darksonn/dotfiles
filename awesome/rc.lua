@@ -287,6 +287,9 @@ end),
 awful.key({modkey}, "q", function ()
   awful.util.spawn("firefox -new-window")
 end),
+awful.key({modkey}, "#107", function ()
+  awful.util.spawn("/home/user/screenshot.sh")
+end),
 awful.key({}, "#172", function ()
   awful.util.spawn("cmus-remote --pause")
 end),
