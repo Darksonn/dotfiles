@@ -17,6 +17,7 @@ NeoBundle 'netrw.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'gerw/vim-HiLinkTrace'
 NeoBundle 'minibufexpl.vim'
+NeoBundle 'derekwyatt/vim-scala'
 
 call neobundle#end()
 NeoBundleCheck " warn me if any packages aren't installed
