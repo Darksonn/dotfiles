@@ -13,4 +13,3 @@ ln -s "$@" dotfiles/bash_profile ~/.bash_profile
 touch ~/.local_awesome_rc.lua
 touch ~/.local_profile
 
-
