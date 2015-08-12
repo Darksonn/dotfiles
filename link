@@ -1,12 +1,15 @@
 #!/bin/bash
-ln -s dotfiles/xinitrc ~/.xinitrc
-ln -s dotfiles/userbashrc ~/.bashrc
-ln -s dotfiles/Xdefaults ~/.Xdefaults
-ln -s dotfiles/nvim ~/.nvim
-ln -s .nvim/nvimrc ~/.nvimrc
-ln -s dotfiles/screenshot ~/.screenshot
-ln -s dotfiles/profile ~/.profile
-ln -s dotfiles/bash_profile ~/.bash_profile
+ln -s "$@" dotfiles/xinitrc ~/.xinitrc
+ln -s "$@" dotfiles/userbashrc ~/.bashrc
+ln -s "$@" dotfiles/Xdefaults ~/.Xdefaults
+if [ "$@" = "-f" ]; then
+  rm ~/.nvim
+fi
+ln -s "$@" dotfiles/nvim ~/.nvim
+ln -s "$@" .nvim/nvimrc ~/.nvimrc
+ln -s "$@" dotfiles/screenshot ~/.screenshot
+ln -s "$@" dotfiles/profile ~/.profile
+ln -s "$@" dotfiles/bash_profile ~/.bash_profile
 touch ~/.local_awesome_rc.lua
 touch ~/.local_profile
 
