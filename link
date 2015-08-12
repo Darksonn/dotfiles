@@ -7,7 +7,7 @@ ln -s .nvim/nvimrc ~/.nvimrc
 ln -s dotfiles/screenshot ~/.screenshot
 ln -s dotfiles/profile ~/.profile
 ln -s dotfiles/bash_profile ~/.bash_profile
-touch ~/.local_awesome_rc
+touch ~/.local_awesome_rc.lua
 touch ~/.local_profile
 
 
