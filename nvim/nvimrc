@@ -40,15 +40,13 @@ set laststatus=2
 
 " Leader init
 noremap <Space> <Nop>
-let mapleader = "\<Space>"
+let mapleader = ":"
 
 " Neovims terminal
 tnoremap jk <C-\><C-n>
 
 " sometimes I start leaving with ZZ, but then redecide and leave with :q
-nnoremap ; :
-nnoremap Z; :
-nnoremap Z: :
+nnoremap <space> :
 
 set backspace=indent,eol,start " reasonable backspaces
 set nofoldenable               " folding is weird
