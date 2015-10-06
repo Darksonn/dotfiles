@@ -25,11 +25,13 @@ filetype plugin indent on
 
 " Building with F9
 function! Run_Build()
+  set nornu
   if filereadable("./Makefile")
-    !make
+    make
   elseif (&filetype == "tex")
     execute("!pdflatex " . bufname("%"))
   endif
+  set rnu
 endfunction
 nnoremap <silent> <F9> :call Run_Build()<CR>
 
