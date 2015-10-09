@@ -9,7 +9,7 @@ theme.fg_normal  = "#DDDDFF"
 theme.fg_focus   = "#F0DFAF"
 theme.fg_urgent  = "#CC9393"
 theme.bg_normal  = "#1A1A1A"
-theme.bg_focus   = "#313131"
+theme.bg_focus   = "#3E3E3E"
 theme.bg_urgent  = "#1A1A1A"
 theme.bg_systray = theme.bg_normal
 
