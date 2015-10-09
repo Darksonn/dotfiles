@@ -1,6 +1,6 @@
 #!/bin/bash
 basename="$(date +%s).png"
-ip='http://ryhl.moe:50010/s'
+ip='http://ryhl.moe/s'
 dir='/home/user/srv/files/s'
 import "$dir/$basename"
 url="$ip/$basename"
