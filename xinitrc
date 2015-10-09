@@ -10,7 +10,7 @@ if [ "$WM" == "" ]; then
   fi
   awesomelog=/var/log/awesome/awesome.log
   echo "Using log file $awesomelog"
-  (xrdb -merge ~/.Xresources && exec awesome -c "$awesomeconfig") >& "$awesomelog"
+  (xrdb -merge ~/.Xresources && exec awesome -c "$awesomeconfig") #>& "$awesomelog"
   unset awesomeconfig awesomelog
 else
   log=~/.log
