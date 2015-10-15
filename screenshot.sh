@@ -1,7 +1,7 @@
 #!/bin/bash
 basename="$(date +%s).png"
-ip='http://ryhl.moe/s'
-dir='/home/user/srv/files/s'
+ip='http://ryhl.moe/~user/s'
+dir='/home/user/public_html/s'
 import "$dir/$basename"
 url="$ip/$basename"
 echo "$url" | xclip -i -selection p
