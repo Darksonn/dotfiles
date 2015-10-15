@@ -18,6 +18,7 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'gerw/vim-HiLinkTrace'
 NeoBundle 'minibufexpl.vim'
 NeoBundle 'derekwyatt/vim-scala'
+NeoBundle 'vim-scripts/vim-auto-save'
 
 call neobundle#end()
 NeoBundleCheck " warn me if any packages aren't installed
@@ -211,6 +212,14 @@ noremap ^ 0
 
 nnoremap <leader>l :b 
 nnoremap <leader>k :e 
+
+" tex autopreview
+function! InotwFunc()
+  :!~/dotfiles/inot update %:t
+  :w
+endfunction
+command Inotw call InotwFunc()
+command HInotw echom "Guide" | echom ":AutoSaveToggle" | echom "Start ~/inot inot buffer" | echom "Start mupdf on diff.pdf"
 
 " no holding several keys
 " inoremap <Shift>` ~

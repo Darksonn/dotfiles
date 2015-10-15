@@ -1,0 +1,14 @@
+#!/bin/bash
+dir=/tmp/"$(md5sum <<< "$(realpath "$2")")"
+if [ "$1" = "update" ]; then
+  echo "$dir"
+  mkdir -p "$dir"
+  rsync -avz . "$dir"
+elif [ "$1" = "inot" ]; then
+  while true; do
+    inotifywait -qre close_write .
+    latexdiff "$dir/$2" "$2" > diff.tex
+    pdflatex -interaction=nonstopmode -halt-on-error "diff.tex"
+    killall -HUP mupdf
+  done
+fi
