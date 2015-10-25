@@ -3,15 +3,9 @@ setxkbmap -option caps:backspace
 setxkbmap -option compose:rctrl
 setxkbmap -option bksp:bksp_escape
 if [ "$WM" == "" ]; then
-  if [ -f ~/.awesome_config ]; then
-    export awesomeconfig=$(cat ~/.awesome_config)
-  else
-    export awesomeconfig=/home/user/.config/awesome
-  fi
-  awesomelog=/var/log/awesome/awesome.log
-  echo "Using log file $awesomelog"
-  (xrdb -merge ~/.Xresources && exec awesome -c "$awesomeconfig") #>& "$awesomelog"
-  unset awesomeconfig awesomelog
+  log=~/.log
+  i3 >& "$log"
+  unset log
 else
   log=~/.log
   echo "Using log file $log"
