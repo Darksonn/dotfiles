@@ -31,6 +31,7 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
+bindsym Mod1+Return exec i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -101,28 +102,82 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym Mod1+a workspace a
+bindsym Mod1+b workspace b
+bindsym Mod1+c workspace c
+bindsym Mod1+d workspace d
+bindsym Mod1+e workspace e
+bindsym Mod1+f workspace f
+bindsym Mod1+g workspace g
+bindsym Mod1+h workspace h
+bindsym Mod1+i workspace i
+bindsym Mod1+j workspace j
+bindsym Mod1+k workspace k
+bindsym Mod1+l workspace l
+bindsym Mod1+m workspace m
+bindsym Mod1+n workspace n
+bindsym Mod1+o workspace o
+bindsym Mod1+p workspace p
+bindsym Mod1+q workspace q
+bindsym Mod1+r workspace r
+bindsym Mod1+s workspace s
+bindsym Mod1+t workspace t
+bindsym Mod1+u workspace u
+bindsym Mod1+v workspace v
+bindsym Mod1+w workspace w
+bindsym Mod1+x workspace x
+bindsym Mod1+y workspace y
+bindsym Mod1+z workspace z
+bindsym Mod1+1 workspace 1
+bindsym Mod1+2 workspace 2
+bindsym Mod1+3 workspace 3
+bindsym Mod1+4 workspace 4
+bindsym Mod1+5 workspace 5
+bindsym Mod1+6 workspace 6
+bindsym Mod1+7 workspace 7
+bindsym Mod1+8 workspace 8
+bindsym Mod1+9 workspace 9
+bindsym Mod1+0 workspace 0
+
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
+bindsym Mod1+Shift+a move container to workspace a
+bindsym Mod1+Shift+b move container to workspace b
+bindsym Mod1+Shift+c move container to workspace c
+bindsym Mod1+Shift+d move container to workspace d
+bindsym Mod1+Shift+e move container to workspace e
+bindsym Mod1+Shift+f move container to workspace f
+bindsym Mod1+Shift+g move container to workspace g
+bindsym Mod1+Shift+h move container to workspace h
+bindsym Mod1+Shift+i move container to workspace i
+bindsym Mod1+Shift+j move container to workspace j
+bindsym Mod1+Shift+k move container to workspace k
+bindsym Mod1+Shift+l move container to workspace l
+bindsym Mod1+Shift+m move container to workspace m
+bindsym Mod1+Shift+n move container to workspace n
+bindsym Mod1+Shift+o move container to workspace o
+bindsym Mod1+Shift+p move container to workspace p
+bindsym Mod1+Shift+q move container to workspace q
+bindsym Mod1+Shift+r move container to workspace r
+bindsym Mod1+Shift+s move container to workspace s
+bindsym Mod1+Shift+t move container to workspace t
+bindsym Mod1+Shift+u move container to workspace u
+bindsym Mod1+Shift+v move container to workspace v
+bindsym Mod1+Shift+w move container to workspace w
+bindsym Mod1+Shift+x move container to workspace x
+bindsym Mod1+Shift+y move container to workspace y
+bindsym Mod1+Shift+z move container to workspace z
+bindsym Mod1+Shift+1 move container to workspace 1
+bindsym Mod1+Shift+2 move container to workspace 2
+bindsym Mod1+Shift+3 move container to workspace 3
+bindsym Mod1+Shift+4 move container to workspace 4
+bindsym Mod1+Shift+5 move container to workspace 5
+bindsym Mod1+Shift+6 move container to workspace 6
+bindsym Mod1+Shift+7 move container to workspace 7
+bindsym Mod1+Shift+8 move container to workspace 8
+bindsym Mod1+Shift+9 move container to workspace 9
+bindsym Mod1+Shift+0 move container to workspace 0
+
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
