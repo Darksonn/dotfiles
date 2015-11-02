@@ -8,7 +8,13 @@ elif [ "$1" = "inot" ]; then
   rsync -avz . "$dir"
   while true; do
     latexdiff "$dir/$2" "$2" > diff.tex
-    pdflatex -interaction=nonstopmode -halt-on-error "diff.tex"
+    lualatex -interaction=nonstopmode -halt-on-error "diff.tex"
+    killall -HUP mupdf
+    inotifywait -qre close_write .
+  done
+elif [ "$1" = "nochange" ]; then
+  while true; do
+    lualatex -interaction=nonstopmode -halt-on-error "$2"
     killall -HUP mupdf
     inotifywait -qre close_write .
   done
