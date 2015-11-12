@@ -49,6 +49,7 @@ bindsym $mod+F5 exec quodlibet --previous
 bindsym $mod+F2 exec amixer ser Master playback 1-
 bindsym $mod+F3 exec amixer ser Master playback 1+
 bindsym --release $mod+Print exec /home/user/screenshot.sh
+bindsym $mod+F1 exec /home/user/dotfiles/lock.sh
 
 
 # change focus
