@@ -1,6 +1,6 @@
 filetype plugin indent off
-set runtimepath+=~/.nvim/bundle/neobundle.vim/,/opt/neovim/runtime
-call neobundle#begin(expand('~/.nvim/bundle/'))
+set runtimepath+=~/.config/nvim/bundle/neobundle.vim/,/opt/neovim/runtime
+call neobundle#begin(expand('~/.config/nvim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 "NeoBundle 'bling/vim-airline'
