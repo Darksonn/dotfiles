@@ -1,10 +1,15 @@
 filetype plugin indent off
+
+let g:python_host_prog = '/usr/bin/python2'
+let g:python3_host_prog = '/usr/bin/python'
+
 set runtimepath+=~/.config/nvim/bundle/neobundle.vim/,/opt/neovim/runtime
 call neobundle#begin(expand('~/.config/nvim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 "NeoBundle 'bling/vim-airline'
 NeoBundle 'wting/rust.vim'
+NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'vim-scripts/Vim-R-plugin'
 NeoBundle 'scrooloose/nerdtree'
@@ -254,3 +259,4 @@ command HInotw echom "Guide" | echom ":AutoSaveToggle" | echom "Start ~/inot ino
 " inoremap <Shift>. >
 " inoremap <Shift>/ ?
 " inoremap <Shift>\ |
+
