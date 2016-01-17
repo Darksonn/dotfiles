@@ -1,0 +1,7 @@
+Title: Disable page numbering
+Tags: sidetal page_numbering page numbering number
+Subject: latex
+Type: Small Snippet
+Snippet: \pagenumbering{gobble}
+
+Disables page numbering in a latex document
