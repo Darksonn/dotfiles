@@ -3,6 +3,7 @@ setxkbmap -option caps:backspace
 setxkbmap -option compose:rctrl
 setxkbmap -option bksp:bksp_escape
 xset m 4/1 1
+[[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
 if [ "$WM" == "" ]; then
   log=~/.log
   i3 >& "$log"
