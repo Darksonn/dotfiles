@@ -18,7 +18,7 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'gerw/vim-HiLinkTrace'
 NeoBundle 'minibufexpl.vim'
 NeoBundle 'derekwyatt/vim-scala'
-NeoBundle 'scrooloose/syntastic'
+"NeoBundle 'scrooloose/syntastic'
 NeoBundle 'vim-scripts/vim-auto-save'
 
 call neobundle#end()
@@ -38,9 +38,9 @@ endfunction
 nnoremap <silent> <F9> :call Run_Build()<CR>
 
 " Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
