@@ -79,6 +79,7 @@ function prompt_command {
 }
 PROMPT_COMMAND=prompt_command
 alias cdback='cd "$BEFOREDIR"'
+alias c='rsync -avz --info=progress2'
 
 function R {
   /usr/bin/R
