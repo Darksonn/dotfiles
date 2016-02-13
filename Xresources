@@ -7,10 +7,10 @@ URxvt.url-launcher: /usr/bin/firefox
 URxvt.matcher.button: 1
 URxvt*borderColor: #000000
 
-URxvt.font: xft:Hack:size=12:antialias=true
-URxvt.boldFont: xft:Hack:size=12:antialias=true:style=Bold
-URxvt.italicFont: xft:Hack:size=12:antialias=true:style=Italic
-URxvt.boldItalicFont: xft:Hack:size=12:antialias=true:style=Bold Italic
+URxvt.font: xft:Hack:size=10:antialias=true
+URxvt.boldFont: xft:Hack:size=10:antialias=true:style=Bold
+URxvt.italicFont: xft:Hack:size=10:antialias=true:style=Italic
+URxvt.boldItalicFont: xft:Hack:size=10:antialias=true:style=Bold Italic
 
 ! tangoesque scheme
 *background: #111111
