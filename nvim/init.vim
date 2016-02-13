@@ -25,6 +25,9 @@ NeoBundle 'minibufexpl.vim'
 NeoBundle 'derekwyatt/vim-scala'
 "NeoBundle 'scrooloose/syntastic'
 NeoBundle 'vim-scripts/vim-auto-save'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neomru.vim'
+NeoBundle 'benekastah/neomake'
 
 call neobundle#end()
 NeoBundleCheck " warn me if any packages aren't installed
@@ -34,7 +37,8 @@ filetype plugin indent on
 function! Run_Build()
   set nornu
   if filereadable("./Makefile")
-    make
+    make!
+    :Neomake!
   elseif (&filetype == "tex")
     execute("!lualatex " . bufname("%"))
   endif
@@ -46,11 +50,11 @@ nnoremap <silent> <F9> :call Run_Build()<CR>
 "set statusline+=%#warningmsg#
 "set statusline+=%{SyntasticStatuslineFlag()}
 "set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+"
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
 
 " Statusbar
 " let g:airline#extensions#tabline#enabled = 1
@@ -172,10 +176,6 @@ nnoremap <leader>vs :source $MYVIMRC<CR>
 " windows
 nnoremap <leader>br :execute "rightbelow vsplit " . bufname("#")<CR>
 nnoremap <leader>bl :execute "leftabove vsplit " . bufname("#")<CR>
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
 
 " colors
 colorscheme pcs
@@ -234,8 +234,8 @@ function! InotwFunc()
   :!~/dotfiles/inot update %:t
   :w
 endfunction
-command Inotw call InotwFunc()
-command HInotw echom "Guide" | echom ":AutoSaveToggle" | echom "Start ~/inot inot buffer" | echom "Start mupdf on diff.pdf"
+command! Inotw call InotwFunc()
+command! HInotw echom "Guide" | echom ":AutoSaveToggle" | echom "Start ~/inot inot buffer" | echom "Start mupdf on diff.pdf"
 
 " no holding several keys
 " inoremap <Shift>` ~
@@ -260,3 +260,7 @@ command HInotw echom "Guide" | echom ":AutoSaveToggle" | echom "Start ~/inot ino
 " inoremap <Shift>/ ?
 " inoremap <Shift>\ |
 
+" unite
+let g:unite_source_history_yank_enable = 1
+nnoremap <C-l> :Unite file buffer file_mru<cr>
+" nnoremap <C-l> :Unite -auto-preview file buffer file_mru<cr>
