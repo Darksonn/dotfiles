@@ -93,8 +93,6 @@ alias v=nvim
 
 # neovim settings
 export TERM='xterm-256color'
-export VIM=/usr/local/src/neovim/runtime/
-export EDITOR=`which nvim`
 
 SSH_ENV=$HOME/.ssh/environment
 
@@ -117,3 +115,4 @@ if [ -f "${SSH_ENV}" ]; then
 else
     start_agent;
 fi
+. ~/.local_bashrc
