@@ -177,9 +177,6 @@ nnoremap <leader>vs :source $MYVIMRC<CR>
 nnoremap <leader>br :execute "rightbelow vsplit " . bufname("#")<CR>
 nnoremap <leader>bl :execute "leftabove vsplit " . bufname("#")<CR>
 
-" colors
-colorscheme pcs
-
 " change case
 nnoremap <leader>~u viwU
 nnoremap <leader>~l viwUviw~
