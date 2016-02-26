@@ -1,0 +1,6 @@
+#!/bin/sh
+branch=$(git symbolic-ref --short HEAD)
+if [ "$branch" != "master" ]; then
+  printf "You are committing to the branch $branch, are you sure you want to do this?"'\'"nRun git commit --no-verify to commit to $branch\\n"
+  exit 1
+fi
