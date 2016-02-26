@@ -262,6 +262,9 @@ layers configuration. You are free to put any user code."
 
 (define-key evil-insert-state-map  "j" 'xwl-jj-as-esc)
 (define-key evil-replace-state-map "k" 'xwl-jj-as-esc)
+(autoload 'php-mode "php-mode" "Major mode for editing php code." t)
+(add-to-list 'auto-mode-alist '("\\.php$" . php-mode))
+(add-to-list 'auto-mode-alist '("\\.inc$" . php-mode))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
