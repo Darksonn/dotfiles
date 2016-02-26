@@ -1,6 +1,7 @@
 export PATH=/opt/texbin:$PATH
 export INFOPATH=/usr/local/texlive/2015/texmf-dist/doc/info:$INFOPATH
 export MANPATH=/usr/local/texlive/2015/texmf-dist/doc/man:$MANPATH
+export SHELL=/usr/bin/zsh
 if test -z "${XDG_RUNTIME_DIR}"; then
     export XDG_RUNTIME_DIR=/tmp/${UID}-runtime-dir
     if ! test -d "${XDG_RUNTIME_DIR}"; then
