@@ -1,1 +1,1 @@
-source ~/.profile
+if [ -r ~/.profile ]; then source ~/.profile; fi
