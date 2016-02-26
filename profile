@@ -9,6 +9,6 @@ if test -z "${XDG_RUNTIME_DIR}"; then
         chmod 0700 "${XDG_RUNTIME_DIR}"
     fi
 fi
-rm ~/.lastdir
+if [ -r ~/.lastdir ]; then rm ~/.lastdir; fi
 if [ -r ~/.local_profile ]; then . ~/.local_profile; fi
 
