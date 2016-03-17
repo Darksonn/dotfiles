@@ -261,3 +261,8 @@ command! HInotw echom "Guide" | echom ":AutoSaveToggle" | echom "Start ~/inot in
 let g:unite_source_history_yank_enable = 1
 nnoremap <C-l> :Unite file buffer file_mru<cr>
 " nnoremap <C-l> :Unite -auto-preview file buffer file_mru<cr>
+
+" isabelle
+au BufRead,BufNewFile *.thy setfiletype isabelle
+au BufRead,BufNewFile *.thy set conceallevel=2
+
