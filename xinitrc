@@ -3,6 +3,8 @@ setxkbmap -option caps:backspace
 setxkbmap -option compose:rctrl
 setxkbmap -option bksp:bksp_escape
 xset m 4/1 1
+xbindkeys &
+(sleep 300; /opt/dropbox/dropboxd) &
 [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
 if [ "$WM" == "" ]; then
   log=~/.log

@@ -28,6 +28,7 @@ NeoBundle 'vim-scripts/vim-auto-save'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'benekastah/neomake'
+NeoBundle 'chriskempson/base16-vim'
 
 call neobundle#end()
 NeoBundleCheck " warn me if any packages aren't installed
@@ -261,3 +262,11 @@ command! HInotw echom "Guide" | echom ":AutoSaveToggle" | echom "Start ~/inot in
 let g:unite_source_history_yank_enable = 1
 nnoremap <C-l> :Unite file buffer file_mru<cr>
 " nnoremap <C-l> :Unite -auto-preview file buffer file_mru<cr>
+
+" isabelle
+au BufRead,BufNewFile *.thy setfiletype isabelle
+au BufRead,BufNewFile *.thy set conceallevel=2
+
+let base16colorspace=256
+colorscheme base16-ocean
+
