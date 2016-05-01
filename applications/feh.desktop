@@ -1,0 +1,9 @@
+[Desktop Entry]
+Categories=Other;
+Exec=feh -FZ %F
+MimeType=image/jpeg;image/png
+Name=feh
+NoDisplay=true
+Terminal=false
+Type=Application
+Icon=feh
