@@ -5,5 +5,5 @@ function mdcd {
   mkdir -- "$1"
   cd "$1"
 }
-# replacement for cp
+# replacement for cp, also works with ssh
 alias c='rsync -avz --info=progress2'
