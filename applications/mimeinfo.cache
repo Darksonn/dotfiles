@@ -1,0 +1,21 @@
+[MIME Cache]
+image/jpeg=firefox.desktop;feh.desktop;feh-mini.desktop;
+image/png=firefox.desktop;feh.desktop;feh-mini.desktop;
+text/css=neovim.desktop;
+text/html=firefox.desktop;neovim.desktop;
+text/javascript=neovim.desktop;
+text/pascal=neovim.desktop;
+text/plain=neovim.desktop;
+text/richtext=neovim.desktop;
+text/rust=neovim.desktop;
+text/tab-separated-values=neovim.desktop;
+text/x-asm=neovim.desktop;
+text/x-c=neovim.desktop;
+text/x-fortran=neovim.desktop;
+text/x-java-source=neovim.desktop;
+text/x-pascal=neovim.desktop;
+text/x-script.elisp=neovim.desktop;
+text/x-script.perl=neovim.desktop;
+text/x-script.zsh=neovim.desktop;
+text/x-tex=neovim.desktop;
+text/xml=neovim.desktop;
