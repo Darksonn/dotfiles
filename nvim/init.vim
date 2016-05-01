@@ -9,7 +9,7 @@ call neobundle#begin(expand('~/.config/nvim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 "NeoBundle 'bling/vim-airline'
 NeoBundle 'wting/rust.vim'
-NeoBundle 'Valloric/YouCompleteMe'
+"NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'vim-scripts/Vim-R-plugin'
 NeoBundle 'scrooloose/nerdtree'
