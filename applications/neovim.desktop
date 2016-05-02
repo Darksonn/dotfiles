@@ -1,6 +1,6 @@
 [Desktop Entry]
 Categories=Accessories;Programming
-Exec=urxvt -e nvim %F
+Exec=urxvt -e zsh -c 'source ~/.zshrc; nvim %F'
 MimeType=text/x-tex;text/plain;text/x-c;text/css;text/css;text/rust;text/x-script.elisp;text/x-fortran;text/html;text/x-java-source;text/javascript;text/x-pascal;text/pascal;text/x-script.perl;text/richtext;text/x-asm;text/tab-separated-values;text/xml;text/x-script.zsh
 Name=Neovim
 NoDisplay=true
