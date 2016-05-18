@@ -1,9 +1,9 @@
 #!/bin/bash
-setxkbmap -option caps:backspace
-setxkbmap -option compose:rctrl
-setxkbmap -option bksp:bksp_escape
+~/dotfiles/keymap.sh
 xset m 4/1 1
 xbindkeys &
+export GTK_IM_MODULE=xim
+export XMODIFIERS="@im=none"
 (sleep 300; /opt/dropbox/dropboxd) &
 [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
 if [ "$WM" == "" ]; then
