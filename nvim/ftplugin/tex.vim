@@ -1,6 +1,7 @@
 inoremap <buffer> $ \(
 inoremap <buffer> $<space> \)
 inoremap <buffer> $. \).
+inoremap <buffer> $, \),
 inoremap <buffer> $$e <esc>o\begin{equation*}<cr>\end{equation*}<esc>O
 inoremap <buffer> $$a <esc>o\begin{align*}<cr>\end{align*}<esc>O
 inoremap <buffer> #q <esc>o\begin{quote}<cr>\end{quote}<esc>O
