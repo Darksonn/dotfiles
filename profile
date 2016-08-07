@@ -11,4 +11,7 @@ if test -z "${XDG_RUNTIME_DIR}"; then
 fi
 if [ -r ~/.lastdir ]; then rm ~/.lastdir; fi
 if [ -r ~/.local_profile ]; then . ~/.local_profile; fi
+export RUST_NEW_ERROR_FORMAT=true
 
+
+export PATH="$HOME/.cargo/bin:$PATH"
