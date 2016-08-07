@@ -1,4 +1,5 @@
 [MIME Cache]
+image/gif=firefox.desktop;
 image/jpeg=firefox.desktop;feh.desktop;feh-mini.desktop;
 image/png=firefox.desktop;feh.desktop;feh-mini.desktop;
 text/css=neovim.desktop;
