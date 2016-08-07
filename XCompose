@@ -7,17 +7,12 @@
 
 
 <Multi_key> <w> <h> : "¯\\_(ツ)_/¯"   # WHATEVER
-
-
-
-
-
-
-
-
-
-
-
+<Multi_key> <l> <e> : "( ͡° ͜ʖ ͡°)"   # WHATEVER
+<Multi_key> <space> <z> : "​"   # ZERO WIDTH SPACE
+<Multi_key> <space> <m> : "᠎"   # MONGOLIAN VOWEL SEPARATOR
+<Multi_key> <colon> <slash> : ":᠎/"   # MONGOLIAN VOWEL SEPARATOR
+<Multi_key> <o> <k> : "👍"   # THUMBS UP
+<Multi_key> <p> <i> : "π"   # THUMBS UP
 
 
 
@@ -681,6 +676,7 @@
 <Multi_key> <slash> <O>          	: "Ø"   Oslash # LATIN CAPITAL LETTER O WITH STROKE
 <Multi_key> <O> <slash> 		: "Ø"   Oslash # LATIN CAPITAL LETTER O WITH STROKE
 <Multi_key> <KP_Divide> <O>      	: "Ø"   Oslash # LATIN CAPITAL LETTER O WITH STROKE
+<Multi_key> <O> <I>              	: "Ø"   Oslash # LATIN CAPITAL LETTER O WITH STROKE
 <dead_grave> <U>                 	: "Ù"   Ugrave # LATIN CAPITAL LETTER U WITH GRAVE
 <Multi_key> <grave> <U>          	: "Ù"   Ugrave # LATIN CAPITAL LETTER U WITH GRAVE
 <Multi_key> <U> <grave> 		: "Ù"   Ugrave # LATIN CAPITAL LETTER U WITH GRAVE
@@ -807,6 +803,7 @@
 <Multi_key> <slash> <o>          	: "ø"   oslash # LATIN SMALL LETTER O WITH STROKE
 <Multi_key> <o> <slash>		   	: "ø"   oslash # LATIN SMALL LETTER O WITH STROKE
 <Multi_key> <KP_Divide> <o>      	: "ø"   oslash # LATIN SMALL LETTER O WITH STROKE
+<Multi_key> <o> <i>              	: "ø"   oslash # LATIN SMALL LETTER O WITH STROKE
 <dead_grave> <u>                 	: "ù"   ugrave # LATIN SMALL LETTER U WITH GRAVE
 <Multi_key> <grave> <u>          	: "ù"   ugrave # LATIN SMALL LETTER U WITH GRAVE
 <Multi_key> <u> <grave> 		: "ù"   ugrave # LATIN SMALL LETTER U WITH GRAVE
