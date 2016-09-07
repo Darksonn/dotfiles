@@ -12,13 +12,50 @@
 <Multi_key> <space> <m> : "᠎"   # MONGOLIAN VOWEL SEPARATOR
 <Multi_key> <colon> <slash> : ":᠎/"   # MONGOLIAN VOWEL SEPARATOR
 <Multi_key> <o> <k> : "👍"   # THUMBS UP
-<Multi_key> <p> <i> : "π"   # THUMBS UP
+<Multi_key> <n> <o> <t> <e> : "♫"   # MUSIC NOTE
 
 
 
 
 
 
+<Multi_key> <g> <a> : "α"   # GREEK LETTER PI
+<Multi_key> <g> <b> : "β"   # GREEK LETTER PI
+<Multi_key> <g> <g> : "γ"   # GREEK LETTER PI
+<Multi_key> <g> <G> : "Γ"   # GREEK LETTER PI
+<Multi_key> <g> <d> : "δ"   # GREEK LETTER PI
+<Multi_key> <g> <D> : "Δ"   # GREEK LETTER PI
+<Multi_key> <g> <e> : "ε"   # GREEK LETTER PI
+<Multi_key> <g> <z> : "ζ"   # GREEK LETTER PI
+<Multi_key> <g> <h> : "η"   # GREEK LETTER PI
+<Multi_key> <g> <t> : "θ"   # GREEK LETTER PI
+<Multi_key> <g> <T> : "Θ"   # GREEK LETTER PI
+<Multi_key> <g> <j> : "ι"   # GREEK LETTER PI
+<Multi_key> <g> <k> : "κ"   # GREEK LETTER PI
+<Multi_key> <g> <l> : "λ"   # GREEK LETTER PI
+<Multi_key> <l> <a> : "λ"   # GREEK LETTER PI
+<Multi_key> <g> <L> : "Λ"   # GREEK LETTER PI
+<Multi_key> <V> <V> : "Λ"   # GREEK LETTER PI
+<Multi_key> <g> <m> : "μ"   # GREEK LETTER PI
+<Multi_key> <g> <n> : "ν"   # GREEK LETTER PI
+<Multi_key> <g> <x> : "ξ"   # GREEK LETTER PI
+<Multi_key> <g> <X> : "Ξ"   # GREEK LETTER PI
+<Multi_key> <p> <i> : "π"   # GREEK LETTER PI
+<Multi_key> <g> <p> : "π"   # GREEK LETTER PI
+<Multi_key> <g> <P> : "Π"   # GREEK LETTER PI
+<Multi_key> <g> <r> : "ρ"   # GREEK LETTER PI
+<Multi_key> <g> <s> : "σ"   # GREEK LETTER PI
+<Multi_key> <g> <S> : "Σ"   # GREEK LETTER PI
+<Multi_key> <G> <s> : "ς"   # GREEK LETTER PI
+<Multi_key> <g> <t> : "τ"   # GREEK LETTER PI
+<Multi_key> <g> <y> : "υ"   # GREEK LETTER PI
+<Multi_key> <g> <f> : "φ"   # GREEK LETTER PI
+<Multi_key> <g> <F> : "Φ"   # GREEK LETTER PI
+<Multi_key> <g> <c> : "χ"   # GREEK LETTER PI
+<Multi_key> <g> <i> : "ψ"   # GREEK LETTER PI
+<Multi_key> <g> <I> : "Ψ"   # GREEK LETTER PI
+<Multi_key> <g> <o> : "ω"   # GREEK LETTER PI
+<Multi_key> <g> <O> : "Ω"   # GREEK LETTER PI
 
 
 
