@@ -231,4 +231,5 @@ bar {
         }
 }
 
+exec compton
 
