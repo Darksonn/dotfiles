@@ -242,6 +242,7 @@ bar {
 }
 
 exec compton -D 10 -I 0.1 -O 0.1
+exec dunst
 
 # start rofi (a program launcher)
 bindsym $mod+d exec "rofi -show run -lines 4 -width 100 -padding 472 -opacity 85 -bw 0 -color-window '$bg-color,$text-color' -color-normal '$bg-color,$text-color,$bg-color,$bg-color,$text-color' -glob -separator-style solid -hide-scrollbar -threads 3 -fullscreen"
