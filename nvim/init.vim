@@ -29,6 +29,15 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'benekastah/neomake'
 NeoBundle 'chriskempson/base16-vim'
+NeoBundle 'fsharp/vim-fsharp', {
+           \ 'description': 'F# support for Vim',
+           \ 'lazy': 1,
+           \ 'autoload': {'filetypes': 'fsharp'},
+           \ 'build': {
+           \   'unix':  'make fsautocomplete',
+           \ },
+           \ 'build_commands': ['curl', 'make', 'mozroots', 'touch', 'unzip'],
+           \}
 
 call neobundle#end()
 NeoBundleCheck " warn me if any packages aren't installed
@@ -269,4 +278,7 @@ au BufRead,BufNewFile *.thy set conceallevel=2
 
 let base16colorspace=256
 colorscheme base16-ocean
+
+set textwidth=80
+set colorcolumn=82
 
