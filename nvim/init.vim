@@ -28,7 +28,17 @@ NeoBundle 'vim-scripts/vim-auto-save'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'benekastah/neomake'
+NeoBundle 'FStarLang/VimFStar'
 NeoBundle 'chriskempson/base16-vim'
+NeoBundle 'fsharp/vim-fsharp', {
+           \ 'description': 'F# support for Vim',
+           \ 'lazy': 1,
+           \ 'autoload': {'filetypes': 'fsharp'},
+           \ 'build': {
+           \   'unix':  'make fsautocomplete',
+           \ },
+           \ 'build_commands': ['curl', 'make', 'mozroots', 'touch', 'unzip'],
+           \}
 
 call neobundle#end()
 NeoBundleCheck " warn me if any packages aren't installed
@@ -267,6 +277,11 @@ nnoremap <C-l> :Unite file buffer file_mru<cr>
 au BufRead,BufNewFile *.thy setfiletype isabelle
 au BufRead,BufNewFile *.thy set conceallevel=2
 
+au BufRead,BufNewFile *.fstar setfiletype fstar
+
 let base16colorspace=256
 colorscheme base16-ocean
+
+set textwidth=80
+set colorcolumn=82
 
