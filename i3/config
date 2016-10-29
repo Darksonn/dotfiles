@@ -39,8 +39,11 @@ bindsym $mod+Shift+q kill
 bindsym $mod+F6 exec quodlibet --next
 bindsym $mod+F4 exec quodlibet --play-pause
 bindsym $mod+F5 exec quodlibet --previous
-bindsym $mod+F2 exec amixer ser Master playback 1-
-bindsym $mod+F3 exec amixer ser Master playback 1+
+bindcode 121 exec amixer set Master toggle
+bindcode 122 exec amixer set Master playback 2%-
+bindcode 123 exec amixer set Master playback 2%+
+bindcode 232 exec xbacklight -dec 10
+bindcode 233 exec xbacklight -inc 10
 bindsym --release $mod+Print exec /home/user/screenshot.sh
 bindsym $mod+F1 exec /home/user/dotfiles/lock.sh
 
