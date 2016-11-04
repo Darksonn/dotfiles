@@ -15,4 +15,5 @@ inoremap <buffer> <expr> <silent> " IsSynHtmlText("”", "\"")
 
 inoremap <buffer> <silent> <p> <p><esc>o</p><esc>O
 inoremap <buffer> <silent> <a> <a href=""></a><esc>5hi
+vnoremap <buffer> <silent> <a> di<a href="<esc>mta"><esc>pa</a><esc>`ta
 
