@@ -7,3 +7,5 @@ function mdcd {
 }
 # replacement for cp, also works with ssh
 alias c='rsync -avz --info=progress2'
+alias cdn='cd /home/user/Dropbox/htx/noter/'
+
