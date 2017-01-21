@@ -5,6 +5,7 @@ inoremap <buffer> $, \),
 inoremap <buffer> $$e <esc>o\begin{equation*}<cr>\end{equation*}<esc>O
 inoremap <buffer> $$a <esc>o\begin{align*}<cr>\end{align*}<esc>O
 inoremap <buffer> #q <esc>o\begin{quote}<cr>\end{quote}<esc>O
+inoremap <buffer> #p <esc>o\begin{proof}<cr>\end{proof}<esc>O
 inoremap <buffer> #fig <esc>o\begin{figure}<cr>\centering<cr>\end{figure}<esc>O<cr>\caption{}<cr>\label{}<esc>kkA<tab>
 inoremap <buffer> #stikz <esc>o\begin{tikzpicture}<cr>\end{tikzpicture}<esc>O
 inoremap <buffer> #tikz <esc>o\begin{figure}<cr>\centering<cr>\end{figure}<esc>O\begin{tikzpicture}<cr>\end{tikzpicture}<cr>\caption{}<cr>\label{}<esc>:call TikzMap()<cr>kkO

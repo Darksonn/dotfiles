@@ -1,3 +1,6 @@
+# completions
+fpath+=~/.zfunc
+
 # history
 HISTFILE=~/.histfile
 HISTSIZE=1000

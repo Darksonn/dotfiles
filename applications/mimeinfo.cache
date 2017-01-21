@@ -1,8 +1,8 @@
 [MIME Cache]
 application/x-maple-worksheet=maple2016.desktop;
 image/gif=firefox.desktop;
-image/jpeg=firefox.desktop;feh-mini.desktop;feh.desktop;
-image/png=firefox.desktop;feh-mini.desktop;feh.desktop;
+image/jpeg=firefox.desktop;feh.desktop;feh-mini.desktop;
+image/png=firefox.desktop;feh.desktop;feh-mini.desktop;
 text/css=neovim.desktop;
 text/html=firefox.desktop;neovim.desktop;
 text/javascript=neovim.desktop;

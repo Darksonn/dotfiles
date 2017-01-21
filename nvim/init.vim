@@ -285,3 +285,6 @@ colorscheme base16-ocean
 set textwidth=80
 set colorcolumn=82
 
+" rust completion, fetch source for current toolchain
+let g:ycm_rust_src_path = system("rustup which cargo | sed 's#/bin/cargo$#/lib/rustlib/src/rust/src#' | tr -d '\n'")
+
