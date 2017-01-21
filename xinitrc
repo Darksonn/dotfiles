@@ -16,4 +16,5 @@ else
   exec $WM > "$log" 2>&1
   unset log
 fi
+[[ -f ~/background ]] && feh --bg-scale ~/background
 
