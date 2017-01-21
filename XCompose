@@ -5,16 +5,16 @@
 
 
 
-
-<Multi_key> <w> <h> : "¯\\_(ツ)_/¯"   # WHATEVER
-<Multi_key> <l> <e> : "( ͡° ͜ʖ ͡°)"   # WHATEVER
-<Multi_key> <space> <0> : "​"   # ZERO WIDTH SPACE
-<Multi_key> <space> <m> : "᠎"   # MONGOLIAN VOWEL SEPARATOR
-<Multi_key> <colon> <slash> : ":᠎/"   # MONGOLIAN VOWEL SEPARATOR
-<Multi_key> <o> <k> : "👍"   # THUMBS UP
-<Multi_key> <n> <o> <t> <e> : "♫"   # MUSIC NOTE
-
-
+<Multi_key> <w> <h> : "¯\\_(ツ)_/¯"         # WHATEVER
+<Multi_key> <l> <e> : "( ͡° ͜ʖ ͡°)"            # LENNY FACE
+<Multi_key> <space> <0> : "​"          # ZERO WIDTH SPACE
+<Multi_key> <space> <m> : "᠎"          # MONGOLIAN VOWEL SEPARATOR
+<Multi_key> <colon> <slash> : ":᠎/"    # MONGOLIAN VOWEL SEPARATOR
+<Multi_key> <o> <k> : "👍"                   # THUMBS UP
+<Multi_key> <n> <o> <t> <e> : "♫"           # MUSIC NOTE
+<Multi_key> <asciitilde> <equal> : "≈"      # ALMOST EQUAL TO
+<Multi_key> <asciitilde> <asciitilde> : "≈" # ALMOST EQUAL TO
+<Multi_key> <asciitilde> <equal> : "≈"      # ALMOST EQUAL TO
 
 
 # GREEK
