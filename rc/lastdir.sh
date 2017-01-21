@@ -1,10 +1,12 @@
 #!/bin/zsh
 if [ "$(id -u)" != "0" ]; then
-  # open the shell in the same directory as last directory, and print files in current directory when cding into it
-  if [ -f ~/.lastdir ]; then
-    cd "`cat ~/.lastdir`"
+  if [ "$(pwd)" = "/home/user" ]; then
+    # open the shell in the same directory as last directory, and print files in current directory when cding into it
+    if [ -f ~/.lastdir ]; then
+      cd "`cat ~/.lastdir`"
+    fi
+    export LASTDIR="/"
   fi
-  export LASTDIR="/"
 fi
 function chpwd {
   pwd > ~/.lastdir
