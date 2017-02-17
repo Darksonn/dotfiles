@@ -6,7 +6,7 @@ export GTK_IM_MODULE=xim
 export XMODIFIERS="@im=none"
 (sleep 300; /opt/dropbox/dropboxd) &
 [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
-[[ -f ~/background ]] && feh --bg-scale ~/background
+[[ -f ~/background ]] && feh --bg-fill ~/background
 if [ "$WM" == "" ]; then
   log=~/.log
   i3 >& "$log"
