@@ -127,6 +127,14 @@ noremap ^ 0
 set textwidth=80
 set colorcolumn=82
 
+" YouCompleteMe configuration
+nnoremap <leader>g :YcmCompleter GoTo<CR>
+nnoremap <leader>t :YcmCompleter GetType<CR>
+nnoremap <leader>t :YcmCompleter FixIt<CR>
+let g:ycm_autoclose_preview_window_after_insertion = 1
+
 " rust completion
 let g:ycm_rust_src_path = system("rustup which cargo | sed 's#/bin/cargo$#/lib/rustlib/src/rust/src#' | tr -d '\n'")
+
+
 
