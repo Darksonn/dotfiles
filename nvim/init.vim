@@ -12,6 +12,7 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'mtth/scratch.vim'
 Plugin 'fholgado/minibufexpl.vim'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'gnuplot.vim'
 
 call vundle#end()
 
@@ -93,6 +94,10 @@ augroup write_on_focus_lost
   autocmd!
   au FocusLost * :wa
   au InsertLeave * :set nopaste
+augroup END
+augroup ftdetect
+  au BufNewFile,BufRead *.plt setlocal ft=gnuplot
+  au BufNewFile,BufRead *.gnu setlocal ft=gnuplot
 augroup END
 
 " append and prepend a line
