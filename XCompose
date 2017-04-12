@@ -15,6 +15,9 @@
 <Multi_key> <asciitilde> <equal> : "≈"      # ALMOST EQUAL TO
 <Multi_key> <asciitilde> <asciitilde> : "≈" # ALMOST EQUAL TO
 <Multi_key> <asciitilde> <equal> : "≈"      # ALMOST EQUAL TO
+<Multi_key> <n> <u> <l> : "␀"               # SYMBOL FOR NULL
+<Multi_key> <n> <l> : "␤"                   # SYMBOL FOR NEWLINE
+<Multi_key> <asciitilde> <equal> : "≈"      # ALMOST EQUAL TO
 
 
 # GREEK
