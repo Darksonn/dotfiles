@@ -52,7 +52,6 @@ set smartindent
 set expandtab
 set tabstop=2
 set shiftwidth=2
-autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
 
 " searching
 set ignorecase
