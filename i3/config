@@ -36,14 +36,14 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 
-bindsym $mod+F6 exec quodlibet --next
-bindsym $mod+F4 exec quodlibet --play-pause
-bindsym $mod+F5 exec quodlibet --previous
 bindcode 121 exec amixer set Master toggle
 bindcode 122 exec amixer set Master playback 2%-
 bindcode 123 exec amixer set Master playback 2%+
 bindcode 232 exec xbacklight -dec 10
 bindcode 233 exec xbacklight -inc 10
+bindsym $mod+End exec /home/user/dotfiles/music.sh next
+bindsym $mod+Insert exec /home/user/dotfiles/music.sh toggle
+bindsym $mod+Delete exec /home/user/dotfiles/music.sh prev
 bindsym --release $mod+Print exec /home/user/screenshot.sh
 bindsym $mod+F1 exec /home/user/dotfiles/lock.sh
 

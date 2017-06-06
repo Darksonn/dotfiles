@@ -10,7 +10,8 @@
 <Multi_key> <space> <0> : "​"          # ZERO WIDTH SPACE
 <Multi_key> <space> <m> : "᠎"          # MONGOLIAN VOWEL SEPARATOR
 <Multi_key> <colon> <slash> : ":᠎/"    # MONGOLIAN VOWEL SEPARATOR
-<Multi_key> <o> <k> : "👍"                   # THUMBS UP
+<Multi_key> <o> <k> : "👍"                  # THUMBS UP
+<Multi_key> <p> <e> : "👌"                  # PERFECT EMOJI
 <Multi_key> <n> <o> <t> <e> : "♫"           # MUSIC NOTE
 <Multi_key> <asciitilde> <equal> : "≈"      # ALMOST EQUAL TO
 <Multi_key> <asciitilde> <asciitilde> : "≈" # ALMOST EQUAL TO
