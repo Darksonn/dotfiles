@@ -6,8 +6,7 @@ dir='/home/user/public_html/s'
 import "$dir/$basename"
 convert "$dir/$basename" "$dir/$basenamejpg"
 url="$ip/$basenamejpg"
-echo "$url" | xclip -i -selection p
-echo "$url" | xclip -i -selection sec
-echo "$url" | xclip -i -selection clip
-echo "$url"
+echo -n "$url" | xclip -i -selection p
+echo -n "$url" | xclip -i -selection sec
+xclip -selection clip -t image/png "$dir/$basename"
 
