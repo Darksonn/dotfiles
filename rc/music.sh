@@ -1,2 +1,2 @@
 #!/bin/bash
-alias music='mpv --no-video --loop-playlist --shuffle --input-ipc-server=/tmp/music'
+alias music='mpv --no-video --loop-playlist --input-ipc-server=/tmp/music'
