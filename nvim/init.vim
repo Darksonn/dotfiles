@@ -140,5 +140,3 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 " rust completion
 let g:ycm_rust_src_path = system("rustup which cargo | sed 's#/bin/cargo$#/lib/rustlib/src/rust/src#' | tr -d '\n'")
 
-
-
